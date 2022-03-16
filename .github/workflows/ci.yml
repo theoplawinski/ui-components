@@ -7,18 +7,22 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
         
     steps:
       - name: Get files
         uses: actions/checkout@v2
       
-      - name: Use Node.js 12
-        uses: actions/setup-node@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
         with:
-          node-version: 12
+          node-version: ${{ matrix.node-version }}
           
       - name: Install packages
-        run: npm i --frozen-lockfile
+        run: npm ci
      
       - name: Build project
         run: npm run build
