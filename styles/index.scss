@@ -1,0 +1,42 @@
+@import "./reference.scss";
+@import "../fonts/fonts.scss";
+
+/* ---------------------------------------------------------------- COMMON */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: $color-gray-light;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color-black;
+}
+
+/* ---------------------------------------------------------------- GLOBAL */
+
+body {
+  width: 100vw;
+  background-color: $color-white;
+  color: $color-black;
+  font-family: $font-inter;
+  font-size: 16px;
+  letter-spacing: -0.05em;
+  line-height: calc(1.61 * 16px);
+  overflow-x: hidden;
+}
