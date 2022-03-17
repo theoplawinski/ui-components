@@ -1,5 +1,6 @@
 import css from "./Header.module.scss";
 import Wrapper from "../Wrapper/Wrapper";
+import Link from "next/link";
 
 export default function Header() {
   const links = [
@@ -44,9 +45,9 @@ export default function Header() {
   return (
     <header className={css.root}>
       <Wrapper className={css.wrapper}>
-        <a className={css.title} href="/">
-          UI Components
-        </a>
+        <Link href="/">
+          <a className={css.title}>UI Components</a>
+        </Link>
 
         <ul className={css.links}>
           {links.map((link, i) => (
