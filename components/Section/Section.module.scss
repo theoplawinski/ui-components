@@ -1,0 +1,16 @@
+@import "../../styles/reference.scss";
+
+.root {}
+
+.title {
+  max-width: 515px;
+  margin: 0 auto;
+  font-size: $text-48;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.grid {
+  margin-top: 128px;
+}
