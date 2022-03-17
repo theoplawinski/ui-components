@@ -1,6 +1,8 @@
 import css from "./Header.module.scss";
+import { useState } from "react";
 import Wrapper from "../Wrapper/Wrapper";
 import Link from "next/link";
+import { merge } from "../../lib/arrayUtils";
 
 export default function Header() {
   const links = [
@@ -46,7 +48,12 @@ export default function Header() {
     <header className={css.root}>
       <Wrapper className={css.wrapper}>
         <Link href="/">
-          <a className={css.title}>UI Components</a>
+          <a className={css.title}>
+            <span
+              className={css.title_circle}
+            />
+            <span className={css.title_text}>UI Components</span>
+          </a>
         </Link>
 
         <ul className={css.links}>
