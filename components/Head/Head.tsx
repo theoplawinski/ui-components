@@ -1,9 +1,11 @@
-import NextHead from "next/head"
+import NextHead from "next/head";
 
-export default function Head() {
+const Head = () => {
   return (
     <NextHead>
       <title>UI Components</title>
     </NextHead>
   );
-}
+};
+
+export default Head;

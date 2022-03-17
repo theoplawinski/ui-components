@@ -7,6 +7,8 @@ interface IProps {
   children?: ReactNode;
 }
 
-export default function Wrapper(props: IProps) {
+const Wrapper = (props: IProps) => {
   return <div className={merge([css.root, props?.className])}>{props?.children}</div>;
-}
+};
+
+export default Wrapper;

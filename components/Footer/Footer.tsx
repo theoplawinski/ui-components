@@ -1,7 +1,7 @@
 import css from "./Footer.module.scss";
 import Wrapper from "../Wrapper/Wrapper";
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer className={css.root}>
       <Wrapper className={css.wrapper}>
@@ -19,4 +19,6 @@ export default function Footer() {
       </Wrapper>
     </footer>
   );
-}
+};
+
+export default Footer;
