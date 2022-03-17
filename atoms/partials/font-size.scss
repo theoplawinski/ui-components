@@ -1,1 +1,27 @@
 /* ---------------------------------------------------------------- FONT-SIZE */
+
+$text-12: 12px;
+$text-14: 14px;
+$text-18: 18px;
+$text-24: 24px;
+$text-36: 36px;
+$text-48: 48px;
+$text-64: 64px;
+$text-72: 72px;
+$text-96: 96px;
+$text-144: 144px;
+$text-288: 288px;
+
+:export {
+  text12: $text-12;
+  text14: $text-14;
+  text18: $text-18;
+  text24: $text-24;
+  text36: $text-36;
+  text48: $text-48;
+  text64: $text-64;
+  text72: $text-72;
+  text96: $text-96;
+  text144: $text-144;
+  text288: $text-288;
+}

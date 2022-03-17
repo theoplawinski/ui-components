@@ -35,8 +35,8 @@ body {
   background-color: $color-white;
   color: $color-black;
   font-family: $font-inter;
-  font-size: 16px;
+  font-size: $text-14;
   letter-spacing: -0.05em;
-  line-height: calc(1.61 * 16px);
+  line-height: calc(1.61 * $text-14);
   overflow-x: hidden;
 }

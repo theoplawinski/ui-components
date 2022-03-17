@@ -1,9 +1,11 @@
 import type { NextPage } from "next";
-import Grid from "../components/Grid/Grid";
+import Section from "../components/Section/Section";
 
 const Home: NextPage = () => {
   return (
-    <Grid />
+    <main>
+      <Section />
+    </main>
   );
 };
 
