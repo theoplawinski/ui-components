@@ -18,9 +18,14 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: $text-24;
+  font-size: $text-18;
   font-weight: 600;
-  line-height: calc(1.61 * $text-24);
+  line-height: calc(1.61 * $text-18);
+
+  @media (min-width: $breakpoint-laptop) {
+    font-size: $text-24;
+    line-height: calc(1.61 * $text-24);
+  }
 
   // &_circle {
   //   position: relative;
