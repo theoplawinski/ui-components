@@ -1,5 +1,6 @@
 import css from "./Section.module.scss";
 import Wrapper from "../Wrapper/Wrapper";
+import components from "../UIComponents/index";
 
 const Section = () => {
   return (
@@ -7,13 +8,11 @@ const Section = () => {
       <Wrapper className={css.wrapper}>
         <h1 className={css.title}>Collection of reusable UI Components</h1>
         <ul className={css.grid}>
-          <li className={css.gridItem}>1</li>
-          <li className={css.gridItem}>1</li>
-          <li className={css.gridItem}>1</li>
-          <li className={css.gridItem}>1</li>
-          <li className={css.gridItem}>1</li>
-          <li className={css.gridItem}>1</li>
-          <li className={css.gridItem}>1</li>
+          {components.map((Component, i) => (
+            <li className={css.gridItem} key={i}>
+              <Component />
+            </li>
+          ))}
         </ul>
       </Wrapper>
     </section>
