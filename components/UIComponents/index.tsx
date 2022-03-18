@@ -1,5 +1,6 @@
-import ButtonMenu from "./ButtonMenu/ButtonMenu";
+import MenuButton from "./MenuButton/MenuButton";
+import ToggleCheckbox from "./ToggleCheckbox/ToggleCheckbox";
 
-const components = [ButtonMenu];
+const components = [MenuButton, ToggleCheckbox];
 
 export default components;

@@ -1,4 +1,4 @@
-import css from "./ButtonMenu.module.scss";
+import css from "./MenuButton.module.scss";
 
 const Component = () => {
   return (
