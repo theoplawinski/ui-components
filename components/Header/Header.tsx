@@ -46,7 +46,7 @@ const Header = () => {
     <header className={css.root}>
       <Wrapper className={css.wrapper}>
         <h2 className={css.title}>
-          {/* <span className={css.title_circle} /> */}
+          <span className={css.title_circle} />
           <span className={css.title_text}>UI Components</span>
         </h2>
 
