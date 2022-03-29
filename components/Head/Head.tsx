@@ -23,7 +23,7 @@ const Head = () => {
       <meta name="msapplication-TileColor" content="#fff" />
       <meta name="theme-color" content="#fff" />
       <link rel="shortcut icon" href="favicon.ico" />
-      {/* <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" /> */}
+      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     </NextHead>
   );
 };
