@@ -8,4 +8,11 @@ const Component = () => {
   );
 };
 
-export default Component;
+const ComponentName = "MenuButton";
+
+const UIComponent = {
+  Component,
+  ComponentName
+};
+
+export default UIComponent;

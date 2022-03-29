@@ -40,4 +40,34 @@
   height: 144px;
   border-radius: 7px;
   background-color: $color-gray-light;
+
+  &:hover {
+    .gridItemLink {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+.gridItemLink {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  transition: color 0.25s ease-out, opacity 0.25s ease-out;
+  color: $color-gray;
+  opacity: 0;
+  pointer-events: none;
+
+  &:hover {
+    color: $color-black;
+  }
+
+  svg {
+    width: 15px;
+    height: 15px;
+  }
 }
