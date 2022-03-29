@@ -20,7 +20,7 @@
   grid-template-columns: repeat(1, 1fr);
   row-gap: $grid-gutter-size;
   column-gap: $grid-gutter-size;
-  margin-top: 128px;
+  margin-top: 96px;
 
   @media (min-width: $breakpoint-tablet) {
     grid-template-columns: repeat(2, 1fr);
