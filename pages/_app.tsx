@@ -1,18 +1,9 @@
-import "../styles/index.scss";
-import type { AppProps } from "next/app";
-import Head from "../components/Head/Head";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
+import '../src/index.scss'
+import '../styles.css'
+import type { AppProps } from 'next/app'
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
-  return (
-    <>
-      <Head />
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
-    </>
-  );
+const App = ({ Component, pageProps }: AppProps) => {
+  return <Component {...pageProps} />
 }
 
-export default MyApp;
+export default App

@@ -1,0 +1,7 @@
+$font-satoshi-regular: 'Satoshi-Regular', sans-serif;
+$font-satoshi-medium: 'Satoshi-Medium', sans-serif;
+
+:export {
+  fontSatoshiRegular: $font-satoshi-regular;
+  fontSatoshiMedium: $font-satoshi-medium;
+}

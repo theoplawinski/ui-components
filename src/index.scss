@@ -1,0 +1,52 @@
+@import './references.scss';
+@import './fonts/fonts.scss';
+
+// -------------------------------------------------------- COMMON
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// ::selection {
+//   background-color: $color-gray-light;
+// }
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color-black;
+  cursor: pointer;
+}
+
+// -------------------------------------------------------- GLOBAL
+
+body {
+  width: 100vw;
+  background-color: $color-white;
+  color: $color-black;
+  font-family: $font-satoshi-regular;
+  font-size: calc(1vw * 1000 / 375); // 10px on 375px screen width
+  letter-spacing: toEm(-0.7);
+  overflow-x: hidden;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: calc(1vw * 1000 / 768); // 10px on 1440px screen width
+  }
+
+  @media (min-width: $breakpoint-laptop) {
+    font-size: calc(1vw * 1000 / 1436); // 10px on 1440px screen width
+  }
+}
