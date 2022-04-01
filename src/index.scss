@@ -39,7 +39,8 @@ body {
   color: $color-black;
   font-family: $font-satoshi-regular;
   font-size: calc(1vw * 1000 / 375); // 10px on 375px screen width
-  letter-spacing: toEm(-0.7);
+  letter-spacing: toEm(-1);
+  line-height: 1.2;
   overflow-x: hidden;
 
   @media (min-width: $breakpoint-tablet) {

@@ -1,0 +1,66 @@
+@import '../../references.scss';
+
+.root {
+  margin-top: toEm($size-64);
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: toEm($size-128);
+  }
+
+  @media (min-width: $breakpoint-laptop) {
+    margin-top: toEm($size-264);
+  }
+}
+
+.title {
+  font-size: toEm($size-40);
+  letter-spacing: toEm(-0.7);
+  line-height: 1;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: toEm($size-64);
+  }
+
+  @media (min-width: $breakpoint-laptop) {
+    font-size: toEm($size-112);
+  }
+}
+
+.gridContainer {
+  padding-top: toEm($size-48);
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: toEm($size-112);
+  }
+
+  @media (min-width: $breakpoint-laptop) {
+    padding-top: toEm($size-248);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: toEm($size-32);
+  column-gap: toEm($size-16);
+
+  @media (min-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: toEm($size-64);
+    column-gap: toEm($size-32);
+  }
+
+  @media (min-width: $breakpoint-laptop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gridItem {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: toEm($size-296);
+  background-color: $color-gray;
+}
