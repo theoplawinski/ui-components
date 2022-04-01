@@ -6,6 +6,7 @@ import content from '../src/data/content.json'
 import Header from '../src/components/header/Header'
 import Footer from '../src/components/footer/Footer'
 import ListSection from '../src/components/listSection/ListSection'
+import BannerSection from '../src/components/bannerSection/BannerSection'
 
 export const GlobalDataContext = React.createContext<IGlobalData>({
   content
@@ -57,6 +58,7 @@ const Home: NextPage = () => {
       <GlobalDataContext.Provider value={globalData}>
         <Header />
         <ListSection />
+        <BannerSection />
         <Footer />
       </GlobalDataContext.Provider>
     </>

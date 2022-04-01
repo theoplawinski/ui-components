@@ -1,0 +1,92 @@
+@import '../../references.scss';
+
+.root {
+  margin-top: toEm($size-64);
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: toEm($size-128);
+  }
+
+  @media (min-width: $breakpoint-laptop) {
+    margin-top: toEm($size-264);
+  }
+}
+
+.container {
+  padding: toEm($size-160) toEm($size-168);
+  border-radius: toEm($size-32);
+  background-color: $color-gray;
+}
+
+.subTitle {
+  font-size: toEm($size-32);
+}
+
+.title {
+  @include title-xl;
+  margin-top: toEm($size-8 / 3);
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  margin-top: toEm($size-40);
+  border-radius: toEm(100);
+  font-family: $font-satoshi-medium;
+  font-size: toEm($size-32);
+  text-align: center;
+  background-color: $color-red;
+  color: $color-white;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    width: 100%;
+    height: 100%;
+    border-radius: 70%;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0, 1),
+      border-radius 0.45s cubic-bezier(0.4, 0, 0, 1);
+    background-color: $color-red-dark;
+    content: '';
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    display: block;
+    padding: toEm($size-24) toEm($size-40);
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0, 1);
+    content: attr(data-text);
+  }
+
+  &:hover {
+    &::before {
+      transform: translateY(0);
+      border-radius: 0;
+    }
+
+    &::after {
+      transform: translateY(0%);
+      transition-delay: 0.1s;
+    }
+
+    .linkText {
+      transform: translateY(-100%);
+      transition-delay: 0s;
+    }
+  }
+}
+
+.linkText {
+  position: relative;
+  transform: translateY(0);
+  display: block;
+  padding: toEm($size-24) toEm($size-40);
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0, 1) 0.1s;
+}

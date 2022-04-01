@@ -8,22 +8,12 @@
   }
 
   @media (min-width: $breakpoint-laptop) {
-    margin-top: toEm($size-264);
+    margin-top: toEm($size-248);
   }
 }
 
 .title {
-  font-size: toEm($size-40);
-  letter-spacing: toEm(-0.7);
-  line-height: 1;
-
-  @media (min-width: $breakpoint-tablet) {
-    font-size: toEm($size-64);
-  }
-
-  @media (min-width: $breakpoint-laptop) {
-    font-size: toEm($size-112);
-  }
+  @include title-xl;
 }
 
 .gridContainer {
@@ -63,4 +53,8 @@
   width: 100%;
   height: toEm($size-296);
   background-color: $color-gray;
+
+  @media (min-width: $breakpoint-tablet) {
+    height: toEm($size-296 * 1.25);
+  }
 }
