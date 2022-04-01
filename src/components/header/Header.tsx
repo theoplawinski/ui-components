@@ -10,7 +10,10 @@ const Header = (props: IProps) => {
   return (
     <header className={merge([css.root, props.className])}>
       <Container>
-        <h2 className={css.title}>UI Components</h2>
+        <h2 className={css.title}>
+          <span className={css.title_circle} />
+          <span className={css.title_text}>UI Components</span>
+        </h2>
       </Container>
     </header>
   )
