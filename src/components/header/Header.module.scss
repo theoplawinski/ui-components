@@ -1,7 +1,7 @@
 @import '../../references.scss';
 
 .root {
-  margin-top: toEm($size-16);
+  margin-top: toEm($size-32);
 
   @media (min-width: $breakpoint-tablet) {
     margin-top: toEm($size-64);

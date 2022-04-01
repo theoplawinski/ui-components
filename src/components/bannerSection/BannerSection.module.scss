@@ -1,14 +1,14 @@
 @import '../../references.scss';
 
 .root {
-  margin-top: toEm($size-64);
+  margin-top: toEm($size-120);
 
   @media (min-width: $breakpoint-tablet) {
-    margin-top: toEm($size-128);
+    margin-top: toEm($size-216);
   }
 
   @media (min-width: $breakpoint-laptop) {
-    margin-top: toEm($size-264);
+    margin-top: toEm($size-296);
   }
 }
 
@@ -28,7 +28,7 @@
 }
 
 .subTitle {
-  font-size: toEm($size-24);
+  font-size: toEm($size-20);
 
   @media (min-width: $breakpoint-tablet) {
     font-size: toEm($size-32);
@@ -37,20 +37,16 @@
 
 .title {
   @include title-xl;
-  margin-top: toEm($size-8 / 2);
-
-  @media (min-width: $breakpoint-tablet) {
-    margin-top: toEm($size-8 / 3);
-  }
+  margin-top: toEm($size-8 / 3);
 }
 
 .link {
   position: relative;
   display: inline-block;
-  margin-top: toEm($size-32);
+  margin-top: toEm($size-24);
   border-radius: toEm(100);
   font-family: $font-satoshi-medium;
-  font-size: toEm($size-24);
+  font-size: toEm($size-20);
   text-align: center;
   background-color: $color-red;
   color: $color-white;

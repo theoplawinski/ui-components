@@ -17,7 +17,7 @@
   }
 
   &_small {
-    max-width: calc(100% - toEm($size-32) * 2);
+    max-width: calc(100% - toEm($size-48) * 2);
 
     @media (min-width: $breakpoint-tablet) {
       max-width: calc(100% - toEm($size-128) * 2);
