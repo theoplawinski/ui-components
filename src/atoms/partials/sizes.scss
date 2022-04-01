@@ -1,5 +1,9 @@
 $size-8: 8;
+$size-12: 12;
+$size-14: 14;
 $size-16: 16;
+$size-18: 18;
+$size-20: 20;
 $size-24: 24;
 $size-32: 32;
 $size-40: 40;
@@ -38,7 +42,11 @@ $size-296: 296;
 
 :export {
   size8: $size-8;
+  size12: $size-12;
+  size14: $size-14;
   size16: $size-16;
+  size18: $size-18;
+  size20: $size-20;
   size24: $size-24;
   size32: $size-32;
   size40: $size-40;

@@ -13,32 +13,54 @@
 }
 
 .container {
-  padding: toEm($size-160) toEm($size-168);
-  border-radius: toEm($size-32);
+  padding: toEm($size-48);
+  border-radius: toEm($size-24);
   background-color: $color-gray;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: toEm($size-96) toEm($size-104);
+    border-radius: toEm($size-32);
+  }
+
+  @media (min-width: $breakpoint-laptop) {
+    padding: toEm($size-160) toEm($size-168);
+  }
 }
 
 .subTitle {
-  font-size: toEm($size-32);
+  font-size: toEm($size-24);
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: toEm($size-32);
+  }
 }
 
 .title {
   @include title-xl;
-  margin-top: toEm($size-8 / 3);
+  margin-top: toEm($size-8 / 2);
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: toEm($size-8 / 3);
+  }
 }
 
 .link {
   position: relative;
   display: inline-block;
-  margin-top: toEm($size-40);
+  margin-top: toEm($size-32);
   border-radius: toEm(100);
   font-family: $font-satoshi-medium;
-  font-size: toEm($size-32);
+  font-size: toEm($size-24);
   text-align: center;
   background-color: $color-red;
   color: $color-white;
   overflow: hidden;
   z-index: 1;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: toEm($size-40);
+    font-size: toEm($size-32);
+  }
 
   &::before {
     position: absolute;
@@ -60,9 +82,13 @@
     left: 0;
     transform: translateY(100%);
     display: block;
-    padding: toEm($size-24) toEm($size-40);
+    padding: toEm($size-20) toEm($size-32);
     transition: transform 0.45s cubic-bezier(0.4, 0, 0, 1);
     content: attr(data-text);
+
+    @media (min-width: $breakpoint-tablet) {
+      padding: toEm($size-24) toEm($size-40);
+    }
   }
 
   &:hover {
@@ -87,6 +113,10 @@
   position: relative;
   transform: translateY(0);
   display: block;
-  padding: toEm($size-24) toEm($size-40);
+  padding: toEm($size-20) toEm($size-32);
   transition: transform 0.45s cubic-bezier(0.4, 0, 0, 1) 0.1s;
+  
+  @media (min-width: $breakpoint-tablet) {
+    padding: toEm($size-24) toEm($size-40);
+  }
 }

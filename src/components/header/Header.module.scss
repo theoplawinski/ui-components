@@ -13,10 +13,10 @@
   justify-content: flex-start;
   align-items: center;
   font-family: $font-satoshi-medium;
-  font-size: toEm($text-24);
+  font-size: toEm($size-24);
 
   @media (min-width: $breakpoint-tablet) {
-    font-size: toEm($text-40);
+    font-size: toEm($size-40);
   }
 
   &_circle {
@@ -24,7 +24,6 @@
     width: toEm($size-16);
     height: toEm($size-16);
     border-radius: toEm($size-296);
-    // overflow: hidden;
 
     &::before,
     &::after {
