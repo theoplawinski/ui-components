@@ -1,0 +1,30 @@
+@import '../../references.scss';
+
+.root {
+  position: relative;
+  margin: 0 auto;
+  
+  &_large {
+    max-width: calc(100% - toEm($size-16) * 2);
+    
+    @media (min-width: $breakpoint-tablet) {
+      max-width: calc(100% - toEm($size-64) * 2);
+    }
+    
+    @media (min-width: $breakpoint-laptop) {
+      max-width: calc(100% - toEm($size-144) * 2);
+    }
+  }
+
+  &_small {
+    max-width: calc(100% - toEm($size-32) * 2);
+
+    @media (min-width: $breakpoint-tablet) {
+      max-width: calc(100% - toEm($size-128) * 2);
+    }
+    
+    @media (min-width: $breakpoint-laptop) {
+      max-width: calc(100% - toEm($size-296) * 2);
+    }
+  }
+}

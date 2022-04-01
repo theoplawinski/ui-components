@@ -3,6 +3,9 @@ import Head from 'next/head'
 import React, { useMemo } from 'react'
 import { IGlobalData } from '../src/data/data-type'
 import content from '../src/data/content.json'
+import Header from '../src/components/header/Header'
+import Footer from '../src/components/footer/Footer'
+import Container, { EContainerSize } from '../src/components/container/Container'
 
 export const GlobalDataContext = React.createContext<IGlobalData>({
   content
@@ -52,9 +55,11 @@ const Home: NextPage = () => {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <GlobalDataContext.Provider value={globalData}>
-        <header>Header</header>
-        <main>Main</main>
-        <footer>Footer</footer>
+        <Header />
+        <main>
+          <Container size={EContainerSize.SMALL}>Main</Container>
+        </main>
+        <Footer />
       </GlobalDataContext.Provider>
     </>
   )

@@ -1,0 +1,18 @@
+@import '../../references.scss';
+
+.root {
+  margin-top: toEm($size-16);
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: toEm($size-64);
+  }
+}
+
+.title {
+  font-family: $font-satoshi-medium;
+  font-size: toEm($text-24);
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: toEm($text-32);
+  }
+}
