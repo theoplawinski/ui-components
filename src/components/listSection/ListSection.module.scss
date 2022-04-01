@@ -14,6 +14,11 @@
 
 .title {
   @include title-xl;
+
+  &_line {
+    transform-origin: left center;
+    display: block;
+  }
 }
 
 .gridContainer {

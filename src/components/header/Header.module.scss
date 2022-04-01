@@ -9,6 +9,7 @@
 }
 
 .title {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -20,7 +21,8 @@
   }
 
   &_circle {
-    position: relative;
+    position: absolute;
+    left: 0;
     width: toEm($size-16);
     height: toEm($size-16);
 
@@ -49,6 +51,8 @@
   }
 
   &_text {
-    margin-left: toEm($size-8);
+    transform-origin: left center;
+    margin-left: toEm($size-16 / 2);
+    padding-left: toEm($size-16);
   }
 }

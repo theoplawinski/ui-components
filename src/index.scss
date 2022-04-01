@@ -11,10 +11,6 @@
   box-sizing: border-box;
 }
 
-// ::selection {
-//   background-color: $color-gray-light;
-// }
-
 h1,
 h2,
 h3 {
@@ -32,6 +28,12 @@ a {
 }
 
 // -------------------------------------------------------- GLOBAL
+
+html {
+  &.locked {
+    overflow: hidden;
+  }
+}
 
 body {
   width: 100vw;

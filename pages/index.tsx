@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import React, { useMemo } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { IGlobalData } from '../src/data/data-type'
 import content from '../src/data/content.json'
 import Header from '../src/components/header/Header'
@@ -17,6 +17,15 @@ const Home: NextPage = () => {
   const description = 'Collection of reusable UI Components'
   const url = 'https://theoplawinski.github.io/ui-components/'
   const ogImage = 'https://theoplawinski.github.io/ui-components/og-image.jpg'
+
+  const [isPlayInComplete, setIsPlayInComplete] = useState<boolean>(false)
+  const [isLogoPlayInComplete, setIsLogoPlayInComplete] = useState<boolean>(false)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    if (isPlayInComplete) document.documentElement.classList.remove('locked')
+    else document.documentElement.classList.add('locked')
+  }, [isPlayInComplete])
 
   const globalData = useMemo(() => {
     return { content }
@@ -56,8 +65,11 @@ const Home: NextPage = () => {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <GlobalDataContext.Provider value={globalData}>
-        <Header />
-        <ListSection />
+        <Header onPlayInComplete={() => setIsLogoPlayInComplete(true)} />
+        <ListSection
+          isLogoPlayInComplete={isLogoPlayInComplete}
+          onPlayInComplete={() => setIsPlayInComplete(true)}
+        />
         <BannerSection />
         <Footer />
       </GlobalDataContext.Provider>
