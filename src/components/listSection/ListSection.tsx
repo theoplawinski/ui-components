@@ -1,5 +1,5 @@
 import css from './ListSection.module.scss'
-import { useEffect, useLayoutEffect, useRef } from 'react'
+import { createRef, MutableRefObject, useEffect, useLayoutEffect, useMemo, useRef } from 'react'
 import { merge } from '../../helpers/merge'
 import Container, { EContainerSize } from '../container/Container'
 import components from '../UIComponents'
@@ -12,7 +12,7 @@ interface IProps {
 }
 
 const ListSection = (props: IProps) => {
-  const titleLines = useRef([])
+  const titleLines = useRef(new Array())
   const gridRef = useRef<HTMLUListElement>(null)
 
   const titleRaw = 'Collection of reusable#UI Components'
