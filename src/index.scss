@@ -39,14 +39,16 @@ body {
   width: 100vw;
   background-color: $color-white;
   color: $color-black;
-  font-family: $font-satoshi-regular;
+  font-family: $font-satoshi-variable;
   font-size: calc(1vw * 1000 / 375); // 10px on 375px screen width
-  letter-spacing: toEm(-1);
+  font-weight: 400;
+  letter-spacing: toEm(-0.5);
   line-height: 1.2;
   overflow-x: hidden;
 
   @media (min-width: $breakpoint-tablet) {
     font-size: calc(1vw * 1000 / 768); // 10px on 1440px screen width
+    letter-spacing: toEm(-1);
   }
 
   @media (min-width: $breakpoint-laptop) {

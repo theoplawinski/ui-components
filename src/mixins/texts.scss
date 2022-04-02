@@ -1,5 +1,6 @@
 @mixin title-xl {
   font-size: toEm($size-40);
+  font-weight: 450;
   letter-spacing: toEm(-0.7);
   line-height: 1;
 

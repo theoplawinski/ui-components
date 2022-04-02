@@ -30,13 +30,14 @@
 
 .subTitle {
   font-size: toEm($size-20);
+  font-weight: 415;
 
   @media (min-width: $breakpoint-tablet) {
     font-size: toEm($size-24);
   }
 
   @media (min-width: $breakpoint-laptop) {
-    font-size: toEm($size-32);
+    font-size: toEm($size-40);
   }
 }
 
@@ -49,7 +50,7 @@
   }
   
   @media (min-width: $breakpoint-laptop) {
-    margin-top: toEm($size-4);
+    margin-top: toEm($size-6);
   }
 }
 
@@ -58,8 +59,8 @@
   display: inline-block;
   margin-top: toEm($size-32);
   border-radius: toEm(100);
-  font-family: $font-satoshi-medium;
   font-size: toEm($size-18);
+  font-weight: 500;
   text-align: center;
   background-color: $color-red;
   color: $color-white;

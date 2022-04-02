@@ -13,8 +13,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-family: $font-satoshi-medium;
   font-size: toEm($size-24);
+  font-weight: 450;
 
   @media (min-width: $breakpoint-tablet) {
     font-size: toEm($size-40);

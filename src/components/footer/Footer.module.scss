@@ -21,6 +21,7 @@ $duration: 0.45s;
 
 .text {
   font-size: toEm($size-18);
+  font-weight: 425;
   opacity: 0.2;
 
   @media (min-width: $breakpoint-tablet) {
