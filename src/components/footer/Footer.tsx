@@ -18,7 +18,8 @@ const Footer = (props: IProps) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Theo Plawinski
+            <span className={css.externalLink_label}>Theo Plawinski</span>
+            <span className={css.externalLink_icon} />
           </a>
         </p>
       </Container>
