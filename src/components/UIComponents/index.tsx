@@ -1,5 +1,5 @@
 import MenuButton from './menuButton/MenuButton'
-import ToggleSoundCheckbox from './toggleSoundCheckbox/ToggleSoundCheckbox'
+import ToggleSoundCheckbox from './ToggleSoundCheckbox/ToggleSoundCheckbox'
 
 const components = [MenuButton, ToggleSoundCheckbox]
 
