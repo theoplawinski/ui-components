@@ -13,17 +13,18 @@
 }
 
 .container {
-  padding: toEm($size-48);
-  border-radius: toEm($size-24);
+  padding: toEm($size-48) toEm($size-40);
+  border-radius: toEm($size-32);
   background-color: $color-gray;
 
   @media (min-width: $breakpoint-tablet) {
-    padding: toEm($size-96) toEm($size-104);
-    border-radius: toEm($size-32);
+    padding: toEm($size-96) toEm($size-120);
+    border-radius: toEm($size-40);
   }
 
   @media (min-width: $breakpoint-laptop) {
-    padding: toEm($size-160) toEm($size-168);
+    padding: toEm($size-136) toEm($size-216);
+    border-radius: toEm($size-48);
   }
 }
 
@@ -31,22 +32,34 @@
   font-size: toEm($size-20);
 
   @media (min-width: $breakpoint-tablet) {
+    font-size: toEm($size-24);
+  }
+
+  @media (min-width: $breakpoint-laptop) {
     font-size: toEm($size-32);
   }
 }
 
 .title {
   @include title-xl;
-  margin-top: toEm($size-8 / 3);
+  margin-top: toEm($size-10);
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: toEm($size-8);
+  }
+  
+  @media (min-width: $breakpoint-laptop) {
+    margin-top: toEm($size-4);
+  }
 }
 
 .link {
   position: relative;
   display: inline-block;
-  margin-top: toEm($size-24);
+  margin-top: toEm($size-32);
   border-radius: toEm(100);
   font-family: $font-satoshi-medium;
-  font-size: toEm($size-20);
+  font-size: toEm($size-18);
   text-align: center;
   background-color: $color-red;
   color: $color-white;
@@ -54,7 +67,11 @@
   z-index: 1;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-top: toEm($size-40);
+    margin-top: toEm($size-48);
+    font-size: toEm($size-20);
+  }
+
+  @media (min-width: $breakpoint-laptop) {
     font-size: toEm($size-32);
   }
 
@@ -78,12 +95,12 @@
     left: 0;
     transform: translateY(100%);
     display: block;
-    padding: toEm($size-20) toEm($size-32);
+    padding: toEm($size-18) toEm($size-32);
     transition: transform 0.45s cubic-bezier(0.4, 0, 0, 1);
     content: attr(data-text);
 
     @media (min-width: $breakpoint-tablet) {
-      padding: toEm($size-24) toEm($size-40);
+      padding: toEm($size-20) toEm($size-32);
     }
   }
 
@@ -109,10 +126,10 @@
   position: relative;
   transform: translateY(0);
   display: block;
-  padding: toEm($size-20) toEm($size-32);
+  padding: toEm($size-18) toEm($size-32);
   transition: transform 0.45s cubic-bezier(0.4, 0, 0, 1) 0.1s;
   
   @media (min-width: $breakpoint-tablet) {
-    padding: toEm($size-24) toEm($size-40);
+    padding: toEm($size-20) toEm($size-32);
   }
 }

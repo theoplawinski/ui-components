@@ -2,11 +2,11 @@
 
 .root {
   position: relative;
+  width: 100%;
+  max-width: calc(100% - toEm($size-24) * 2);
   margin: 0 auto;
   
   &_large {
-    max-width: calc(100% - toEm($size-16) * 2);
-    
     @media (min-width: $breakpoint-tablet) {
       max-width: calc(100% - toEm($size-64) * 2);
     }
@@ -17,8 +17,6 @@
   }
 
   &_small {
-    max-width: calc(100% - toEm($size-48) * 2);
-
     @media (min-width: $breakpoint-tablet) {
       max-width: calc(100% - toEm($size-128) * 2);
     }
