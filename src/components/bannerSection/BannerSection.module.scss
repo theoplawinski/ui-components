@@ -43,6 +43,7 @@
 
 .title {
   @include title-xl;
+  max-width: 80%;
   margin-top: toEm($size-10);
 
   @media (min-width: $breakpoint-tablet) {

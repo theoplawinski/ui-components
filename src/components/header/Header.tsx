@@ -1,8 +1,9 @@
 import css from './Header.module.scss'
+import { useContext, useLayoutEffect, useRef } from 'react'
 import { merge } from '../../helpers/merge'
+import { GlobalDataContext } from '../../../pages'
 import Container from '../container/Container'
 import gsap from 'gsap'
-import { useLayoutEffect, useRef } from 'react'
 
 interface IProps {
   className?: string
@@ -10,6 +11,8 @@ interface IProps {
 }
 
 const Header = (props: IProps) => {
+  const { content } = useContext(GlobalDataContext)
+
   const titleCircleRef = useRef<HTMLSpanElement>(null)
   const titleTextRef = useRef<HTMLSpanElement>(null)
 
@@ -71,7 +74,7 @@ const Header = (props: IProps) => {
         <h2 className={css.title}>
           <span className={css.title_circle} ref={titleCircleRef} />
           <span className={css.title_text} ref={titleTextRef}>
-            UI Components
+            {content.header.title}
           </span>
         </h2>
       </Container>

@@ -1,6 +1,7 @@
 import css from './ListSection.module.scss'
-import { createRef, MutableRefObject, useEffect, useLayoutEffect, useMemo, useRef } from 'react'
+import { useContext, useEffect, useLayoutEffect, useRef } from 'react'
 import { merge } from '../../helpers/merge'
+import { GlobalDataContext } from '../../../pages'
 import Container, { EContainerSize } from '../container/Container'
 import components from '../UIComponents'
 import gsap from 'gsap'
@@ -12,10 +13,12 @@ interface IProps {
 }
 
 const ListSection = (props: IProps) => {
+  const { content } = useContext(GlobalDataContext)
+
   const titleLines = useRef(new Array())
   const gridRef = useRef<HTMLUListElement>(null)
 
-  const titleRaw = 'Collection of reusable#UI Components'
+  const titleRaw = content.listSection.title
   const title = titleRaw.split('#')
 
   const tl = useRef<gsap.core.Timeline>()

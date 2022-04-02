@@ -1,1 +1,23 @@
-{}
+{
+  "header": {
+    "title": "UI Components"
+  },
+  "listSection": {
+    "title": "Collection of reusable#UI Components"
+  },
+  "bannerSection": {
+    "title": "The source code is available on Github",
+    "subtitle": "Dev source",
+    "externalLink": {
+      "name": "Github page",
+      "to": "https://github.com/theoplawinski/ui-components"
+    }
+  },
+  "footer": {
+    "text": "Built by",
+    "externalLink": {
+      "name": "Theo Plawinski",
+      "to": "https://theoplawinski.com"
+    }
+  }
+}
