@@ -12,8 +12,11 @@ interface IProps {
 }
 
 const ListSection = (props: IProps) => {
-  const titleRef = useRef<HTMLHeadingElement>(null)
+  const titleLines = useRef([])
   const gridRef = useRef<HTMLUListElement>(null)
+
+  const titleRaw = 'Collection of reusable#UI Components'
+  const title = titleRaw.split('#')
 
   const tl = useRef<gsap.core.Timeline>()
 
@@ -25,7 +28,7 @@ const ListSection = (props: IProps) => {
     })
 
     tl.fromTo(
-      titleRef.current && titleRef.current.querySelectorAll('div'),
+      titleLines.current,
       {
         y: 70,
         rotate: 30,
@@ -69,9 +72,16 @@ const ListSection = (props: IProps) => {
   return (
     <div className={merge([css.root, props.className])}>
       <Container size={EContainerSize.SMALL}>
-        <h1 className={css.title} ref={titleRef}>
-          <div className={css.title_line}>Collection of reusable</div>
-          <div className={css.title_line}>UI Components</div>
+        <h1 className={css.title}>
+          {title.map((textLine, i) => (
+            <div
+              className={css.title_line}
+              ref={(r) => (titleLines.current[i] = r)}
+              key={i}
+            >
+              {textLine}
+            </div>
+          ))}
         </h1>
       </Container>
       <Container className={css.gridContainer} size={EContainerSize.LARGE}>
