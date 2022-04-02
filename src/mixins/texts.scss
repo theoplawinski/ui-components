@@ -1,4 +1,5 @@
 @mixin title-xl {
+  // font-family: $font-satoshi-medium;
   font-size: toEm($size-48);
   letter-spacing: toEm(-0.7);
   line-height: 1;

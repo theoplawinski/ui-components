@@ -5,7 +5,7 @@ const Component = () => {
     <label className={css.root}>
       <input className={css.input} type="checkbox" />
       <div className={css.marker}></div>
-      <span>
+      <span className={css.icon}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -19,7 +19,7 @@ const Component = () => {
           />
         </svg>
       </span>
-      <span>
+      <span className={css.icon}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
