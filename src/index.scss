@@ -30,7 +30,9 @@ a {
 // -------------------------------------------------------- GLOBAL
 
 html {
-  &.locked {
+  &.locked,
+  &.locked body {
+    height: calc(var(--window-inner-height) - 1px);
     overflow: hidden;
   }
 }
