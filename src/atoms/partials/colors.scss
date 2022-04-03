@@ -4,12 +4,3 @@ $color-gray: #f6f6f6;
 $color-red: #ff424d;
 $color-red-light: #ff6871;
 $color-red-dark: #ff2935;
-
-:export {
-  colorBlack: $color-black;
-  colorWhite: $color-white;
-  colorGray: $color-gray;
-  colorRed: $color-red;
-  colorRedLight: $color-red-light;
-  colorRedDark: $color-red-dark;
-}

@@ -6,76 +6,78 @@
   height: toEm($size-96 / 2);
   border-radius: toEm($size-64);
   background-color: $color-red;
-  cursor: pointer;
   overflow: hidden;
+  cursor: pointer;
 
   @media (min-width: $breakpoint-tablet) {
     width: toEm($size-136);
     height: toEm($size-136 / 2);
   }
+}
 
-  .input {
-    position: absolute;
-    width: 0;
-    height: 0;
-    opacity: 0;
+.input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  width: 50%;
+  height: 100%;
+  border: toEm(4) solid $color-red;
+  border-radius: 50%;
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-color: $color-white;
+
+  @media (min-width: $breakpoint-tablet) {
+    border-width: toEm(6);
+  }
+}
+
+.input:checked ~ .marker {
+  transform: translateX(0%);
+}
+
+.icon {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  transition: color 0.3s ease;
+  will-change: transform;
+
+  &:nth-child(3) {
+    color: $color-white;
   }
 
-  .marker {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(100%);
-    width: 50%;
-    height: 100%;
-    border: toEm(4) solid $color-red;
-    border-radius: 50%;
-    transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    background-color: $color-white;
+  &:nth-child(4) {
+    color: $color-red;
+  }
+
+  svg {
+    width: toEm($size-16);
+    height: toEm($size-16);
 
     @media (min-width: $breakpoint-tablet) {
-      border-width: toEm(6);
+      width: toEm($size-22);
+      height: toEm($size-22);
     }
   }
+}
 
-  .input:checked ~ .marker {
-    transform: translateX(0%);
+.input:checked ~ .icon {
+  &:nth-child(3) {
+    color: $color-red;
   }
 
-  .icon {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-    transition: color 0.3s ease;
-    will-change: transform;
-
-    &:nth-child(3) {
-      color: $color-white;
-    }
-    &:nth-child(4) {
-      color: $color-red;
-    }
-
-    svg {
-      width: toEm($size-16);
-      height: toEm($size-16);
-
-      @media (min-width: $breakpoint-tablet) {
-        width: toEm($size-22);
-        height: toEm($size-22);
-      }
-    }
-  }
-
-  .input:checked ~ .icon {
-    &:nth-child(3) {
-      color: $color-red;
-    }
-    &:nth-child(4) {
-      color: $color-white;
-    }
+  &:nth-child(4) {
+    color: $color-white;
   }
 }
