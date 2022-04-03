@@ -14,7 +14,7 @@
 
 .title {
   @include title-xl;
-  padding-left: toEm($size-16);
+  padding-left: toEm($size-14);
 
   @media (min-width: $breakpoint-tablet) {
     padding-left: 0;
