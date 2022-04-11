@@ -27,10 +27,6 @@ const ListSection = (props: IProps) => {
     `only screen and (min-width: ${atoms['breakpointTablet']})`
   )
 
-  useEffect(() => {
-    console.log('isDesktop', isDesktop)
-  }, [isDesktop])
-
   const tl = useRef<gsap.core.Timeline>()
 
   const initTl = (): gsap.core.Timeline => {

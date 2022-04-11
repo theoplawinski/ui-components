@@ -3,13 +3,19 @@ import '../styles.css'
 import type { AppProps } from 'next/app'
 import { useEffect } from 'react'
 import WindowHelper from '../src/helpers/WindowHelper'
+import { ThemeProvider } from 'next-themes'
+import { EThemeColor } from '../src/atoms/EThemeColor'
 
 const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     new WindowHelper()
   })
 
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider defaultTheme={EThemeColor.LIGHT}>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
 
 export default App

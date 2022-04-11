@@ -43,7 +43,7 @@ $duration: 0.45s;
     width: 100%;
     height: toEm(1);
     will-change: transform;
-    background-color: $color-black;
+    background-color: var(--color-text);
     content: '';
   }
 
@@ -80,6 +80,10 @@ $duration: 0.45s;
       background-repeat: no-repeat;
       pointer-events: none;
       content: '';
+
+      [data-theme='dark'] & {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='svg-arrow-right' viewBox='0 0 16 12' width='100%25' height='100%25'%3E%3Cpolygon points='15.8,6 15.3,5.5 15.3,5.5 9.9,0.1 9.2,0.8 13.9,5.5 0.5,5.5 0.5,6.5 13.9,6.5 9.2,11.2 9.9,11.9 15.3,6.5 15.3,6.5' fill='%23f5f5f7'%3E%3C/polygon%3E%3C/svg%3E");
+      }
     }
 
     &::before {

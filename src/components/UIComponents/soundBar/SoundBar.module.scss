@@ -26,7 +26,7 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   transition: opacity 0.3s ease;
-  background-color: $color-red;
+  background-color: var(--color-accent);
 
   @media (min-width: $breakpoint-tablet) {
     width: toEm(5);

@@ -3,6 +3,7 @@ import { useContext, useEffect, useLayoutEffect, useRef } from 'react'
 import { merge } from '../../helpers/merge'
 import { GlobalDataContext } from '../../../pages'
 import Container from '../container/Container'
+import ThemeSwitcher from '../themeSwitcher/ThemeSwitcher'
 import gsap from 'gsap'
 
 interface IProps {
@@ -16,11 +17,15 @@ const Header = (props: IProps) => {
 
   const buttonList = [
     {
+      name: 'theme-switcher',
+      renderer: <ThemeSwitcher className={css.button} />
+    },
+    {
       name: content.header.ctaGithub.name,
       renderer: (
         <a
           className={css.button}
-          href={content.header.ctaGithub.name}
+          href={content.header.ctaGithub.to}
           target="_blank"
           rel="noopener noreferrer"
         >

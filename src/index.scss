@@ -1,6 +1,26 @@
 @import './references.scss';
 @import './fonts/fonts.scss';
 
+// -------------------------------------------------------- VARIABLES
+
+:root {
+  --color-text: #000000;
+  --color-background: #ffffff;
+  --color-accent: #ff424d;
+  --color-accent-light: #ff6871;
+  --color-accent-dark: #ff2935;
+  --color-gray: #f6f6f6;
+}
+
+[data-theme='dark'] {
+  --color-text: #f5f5f7;
+  --color-background: #000000;
+  --color-accent: #768390;
+  --color-accent-light: #909daa;
+  --color-accent-dark: #626e7b;
+  --color-gray: #141414;
+}
+
 // -------------------------------------------------------- COMMON
 
 * {
@@ -23,7 +43,7 @@ li {
 
 a {
   text-decoration: none;
-  color: $color-black;
+  color: var(--color-text);
   cursor: pointer;
 }
 
@@ -39,8 +59,8 @@ html {
 
 body {
   width: 100vw;
-  background-color: $color-white;
-  color: $color-black;
+  background-color: var(--color-background);
+  color: var(--color-text);
   font-family: $font-satoshi-variable;
   font-size: calc(1vw * 1000 / 375); // 10px on 375px screen width
   font-weight: 400;

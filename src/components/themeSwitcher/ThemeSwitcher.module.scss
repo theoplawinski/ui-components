@@ -1,0 +1,13 @@
+@import '../../references.scss';
+
+.root {
+  display: block;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

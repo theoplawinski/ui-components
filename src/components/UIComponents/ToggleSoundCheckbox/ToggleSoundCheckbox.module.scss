@@ -5,7 +5,7 @@
   width: toEm($size-96);
   height: toEm($size-96 / 2);
   border-radius: toEm($size-64);
-  background-color: $color-red;
+  background-color: var(--color-accent);
   overflow: hidden;
   cursor: pointer;
 
@@ -29,10 +29,10 @@
   transform: translateX(100%);
   width: 50%;
   height: 100%;
-  border: toEm(4) solid $color-red;
+  border: toEm(4) solid var(--color-accent);
   border-radius: 50%;
   transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background-color: $color-white;
+  background-color: var(--color-background);
 
   @media (min-width: $breakpoint-tablet) {
     border-width: toEm(6);
@@ -54,11 +54,11 @@
   will-change: transform;
 
   &:nth-child(3) {
-    color: $color-white;
+    color: var(--color-background);
   }
 
   &:nth-child(4) {
-    color: $color-red;
+    color: var(--color-accent);
   }
 
   svg {
@@ -74,10 +74,10 @@
 
 .input:checked ~ .icon {
   &:nth-child(3) {
-    color: $color-red;
+    color: var(--color-accent);
   }
 
   &:nth-child(4) {
-    color: $color-white;
+    color: var(--color-background);
   }
 }
