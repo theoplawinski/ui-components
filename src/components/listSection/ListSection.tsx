@@ -5,6 +5,8 @@ import { GlobalDataContext } from '../../../pages'
 import Container, { EContainerSize } from '../container/Container'
 import components from '../UIComponents'
 import gsap from 'gsap'
+import { useMediaQuery } from '@react-hook/media-query'
+import { atoms } from '../../atoms/atoms'
 
 interface IProps {
   className?: string
@@ -21,6 +23,14 @@ const ListSection = (props: IProps) => {
   const titleRaw = content.listSection.title
   const title = titleRaw.split('#')
 
+  const isDesktop = useMediaQuery(
+    `only screen and (min-width: ${atoms['breakpointTablet']})`
+  )
+
+  useEffect(() => {
+    console.log('isDesktop', isDesktop)
+  }, [isDesktop])
+
   const tl = useRef<gsap.core.Timeline>()
 
   const initTl = (): gsap.core.Timeline => {
@@ -33,7 +43,7 @@ const ListSection = (props: IProps) => {
     tl.fromTo(
       titleLines.current,
       {
-        y: 70,
+        y: isDesktop ? 70 : 35,
         rotate: 30,
         opacity: 0
       },
@@ -48,7 +58,7 @@ const ListSection = (props: IProps) => {
     ).fromTo(
       gridRef.current,
       {
-        y: 70,
+        y: isDesktop ? 70 : 35,
         opacity: 0
       },
       {
