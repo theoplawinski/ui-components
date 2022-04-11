@@ -8,6 +8,7 @@ export interface IGlobalData {
 export interface IContentData {
   header: {
     title: string
+    ctaGithub: ILinkData
   }
   listSection: {
     title: string

@@ -16,11 +16,11 @@ const Header = (props: IProps) => {
 
   const buttonList = [
     {
-      name: 'github',
+      name: content.header.ctaGithub.name,
       renderer: (
         <a
           className={css.button}
-          href="https://github.com/theoplawinski/ui-components"
+          href={content.header.ctaGithub.name}
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -1,6 +1,10 @@
 {
   "header": {
-    "title": "UI Components"
+    "title": "UI Components",
+    "ctaGithub": {
+      "name": "Github",
+      "to": "https://github.com/theoplawinski/ui-components"
+    }
   },
   "listSection": {
     "title": "Collection of reusable#UI Components"
