@@ -8,6 +8,12 @@
   }
 }
 
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .title {
   position: relative;
   display: flex;
@@ -54,5 +60,42 @@
     transform-origin: left center;
     margin-left: toEm($size-16 / 2);
     padding-left: toEm($size-16);
+  }
+}
+
+.buttonList {
+  display: flex;
+  align-items: center;
+}
+
+.buttonItem {
+  width: toEm($size-24);
+  height: toEm($size-24);
+
+  &:not(:first-child) {
+    margin-left: toEm(8);
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    width: toEm($size-40);
+    height: toEm($size-40);
+  }
+}
+
+.button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: $color-black;
+  transition: opacity 0.15s ease-out;
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
   }
 }

@@ -65,7 +65,10 @@ const Home: NextPage = () => {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <GlobalDataContext.Provider value={globalData}>
-        <Header onPlayInComplete={() => setIsLogoPlayInComplete(true)} />
+        <Header
+          isListPlayInComplete={isPlayInComplete}
+          onPlayInComplete={() => setIsLogoPlayInComplete(true)}
+        />
         <ListSection
           isLogoPlayInComplete={isLogoPlayInComplete}
           onPlayInComplete={() => setIsPlayInComplete(true)}
