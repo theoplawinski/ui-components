@@ -4,35 +4,35 @@ $ease: cubic-bezier(0.65, 0, 0.35, 1);
 $duration: 0.45s;
 
 .root {
-  margin-top: toEm($size-112);
-  margin-bottom: toEm($size-56);
+  margin-top: toEm(112);
+  margin-bottom: toEm(56);
   text-align: center;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-top: toEm($size-216);
-    margin-bottom: toEm($size-112);
+    margin-top: toEm(216);
+    margin-bottom: toEm(112);
   }
 
   @media (min-width: $breakpoint-laptop) {
-    margin-top: toEm($size-296);
-    margin-bottom: toEm($size-144);
+    margin-top: toEm(296);
+    margin-bottom: toEm(144);
   }
 }
 
 .text {
-  font-size: toEm($size-18);
+  font-size: toEm(18);
   font-weight: 425;
   opacity: 0.2;
 
   @media (min-width: $breakpoint-tablet) {
-    font-size: toEm($size-24);
+    font-size: toEm(24);
   }
 }
 
 .externalLink {
   position: relative;
   display: inline-block;
-  padding-bottom: toEm($size-2);
+  padding-bottom: toEm(2);
   will-change: transform, opacity;
 
   &::before,
@@ -63,8 +63,8 @@ $duration: 0.45s;
     position: absolute;
     top: 0;
     left: 100%;
-    width: toEm($size-16);
-    height: toEm($size-16);
+    width: toEm(16);
+    height: toEm(16);
     pointer-events: none;
 
     &::before,
@@ -91,7 +91,7 @@ $duration: 0.45s;
     }
 
     &::after {
-      transform: rotate(-45deg) translateX(toEm(-$size-6));
+      transform: rotate(-45deg) translateX(toEm(-6));
       transition: transform $duration $ease, opacity $duration $ease;
       opacity: 0;
     }
@@ -110,7 +110,7 @@ $duration: 0.45s;
 
     .externalLink_icon {
       &::before {
-        transform: rotate(-45deg) translateX(toEm($size-6));
+        transform: rotate(-45deg) translateX(toEm(6));
         transition: transform $duration $ease, opacity $duration $ease;
         opacity: 0;
       }

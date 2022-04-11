@@ -3,26 +3,26 @@
 .root {
   position: relative;
   width: 100%;
-  max-width: calc(100% - toEm($size-24) * 2);
+  max-width: calc(100% - toEm(24) * 2);
   margin: 0 auto;
-  
+
   &_large {
     @media (min-width: $breakpoint-tablet) {
-      max-width: calc(100% - toEm($size-64) * 2);
+      max-width: calc(100% - toEm(64) * 2);
     }
-    
+
     @media (min-width: $breakpoint-laptop) {
-      max-width: calc(100% - toEm($size-144) * 2);
+      max-width: calc(100% - toEm(144) * 2);
     }
   }
 
   &_small {
     @media (min-width: $breakpoint-tablet) {
-      max-width: calc(100% - toEm($size-128) * 2);
+      max-width: calc(100% - toEm(128) * 2);
     }
-    
+
     @media (min-width: $breakpoint-laptop) {
-      max-width: calc(100% - toEm($size-296) * 2);
+      max-width: calc(100% - toEm(296) * 2);
     }
   }
 }

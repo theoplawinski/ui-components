@@ -16,10 +16,10 @@
 
 .bar {
   transform-origin: center;
-  width: toEm($size-4);
-  height: toEm($size-32);
-  margin: 0 toEm($size-2);
-  border-radius: toEm($size-64);
+  width: toEm(4);
+  height: toEm(32);
+  margin: 0 toEm(2);
+  border-radius: toEm(64);
   animation-name: sound;
   animation-delay: 0.7s;
   animation-direction: alternate;
@@ -30,7 +30,7 @@
 
   @media (min-width: $breakpoint-tablet) {
     width: toEm(5);
-    height: toEm($size-40);
+    height: toEm(40);
   }
 
   &:nth-child(1) {

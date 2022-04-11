@@ -2,14 +2,14 @@
 
 .root {
   position: relative;
-  width: toEm($size-64);
-  height: toEm($size-64);
-  border-radius: toEm($size-64);
+  width: toEm(64);
+  height: toEm(64);
+  border-radius: toEm(64);
   cursor: pointer;
 
   @media (min-width: $breakpoint-tablet) {
-    width: toEm($size-88);
-    height: toEm($size-88);
+    width: toEm(88);
+    height: toEm(88);
   }
 
   &::before {
@@ -35,8 +35,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 30%;
-    height: toEm($size-2);
-    border-radius: toEm($size-64);
+    height: toEm(2);
+    border-radius: toEm(64);
     background-color: var(--color-background);
 
     &::before,
@@ -45,24 +45,24 @@
       left: 0;
       width: 100%;
       height: 100%;
-      border-radius: toEm($size-64);
+      border-radius: toEm(64);
       background-color: var(--color-background);
       content: '';
     }
 
     &::before {
-      top: toEm(-$size-6);
+      top: toEm(-6);
 
       @media (min-width: $breakpoint-tablet) {
-        top: toEm(-$size-8);
+        top: toEm(-8);
       }
     }
 
     &::after {
-      top: toEm($size-6);
+      top: toEm(6);
 
       @media (min-width: $breakpoint-tablet) {
-        top: toEm($size-8);
+        top: toEm(8);
       }
     }
   }

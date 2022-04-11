@@ -2,16 +2,16 @@
 
 .root {
   position: relative;
-  width: toEm($size-96);
-  height: toEm($size-96 / 2);
-  border-radius: toEm($size-64);
+  width: toEm(96);
+  height: toEm(96 / 2);
+  border-radius: toEm(64);
   background-color: var(--color-accent);
   overflow: hidden;
   cursor: pointer;
 
   @media (min-width: $breakpoint-tablet) {
-    width: toEm($size-136);
-    height: toEm($size-136 / 2);
+    width: toEm(136);
+    height: toEm(136 / 2);
   }
 }
 
@@ -62,12 +62,12 @@
   }
 
   svg {
-    width: toEm($size-16);
-    height: toEm($size-16);
+    width: toEm(16);
+    height: toEm(16);
 
     @media (min-width: $breakpoint-tablet) {
-      width: toEm($size-22);
-      height: toEm($size-22);
+      width: toEm(22);
+      height: toEm(22);
     }
   }
 }

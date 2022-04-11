@@ -1,10 +1,10 @@
 @import '../../references.scss';
 
 .root {
-  margin-top: toEm($size-32);
+  margin-top: toEm(32);
 
   @media (min-width: $breakpoint-tablet) {
-    margin-top: toEm($size-64);
+    margin-top: toEm(64);
   }
 }
 
@@ -19,18 +19,18 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: toEm($size-24);
+  font-size: toEm(24);
   font-weight: 450;
 
   @media (min-width: $breakpoint-tablet) {
-    font-size: toEm($size-40);
+    font-size: toEm(40);
   }
 
   &_circle {
     position: absolute;
     left: 0;
-    width: toEm($size-16);
-    height: toEm($size-16);
+    width: toEm(16);
+    height: toEm(16);
 
     &::before,
     &::after {
@@ -44,22 +44,22 @@
 
     &::before {
       top: 0;
-      border-top-left-radius: toEm($size-104);
-      border-top-right-radius: toEm($size-104);
+      border-top-left-radius: toEm(104);
+      border-top-right-radius: toEm(104);
     }
 
     &::after {
       bottom: 0;
-      border-bottom-left-radius: toEm($size-104);
-      border-bottom-right-radius: toEm($size-104);
+      border-bottom-left-radius: toEm(104);
+      border-bottom-right-radius: toEm(104);
       opacity: 0.7;
     }
   }
 
   &_text {
     transform-origin: left center;
-    margin-left: toEm($size-16 / 2);
-    padding-left: toEm($size-16);
+    margin-left: toEm(16 / 2);
+    padding-left: toEm(16);
   }
 }
 
@@ -69,16 +69,16 @@
 }
 
 .buttonItem {
-  width: toEm($size-24);
-  height: toEm($size-24);
+  width: toEm(24);
+  height: toEm(24);
 
   &:not(:first-child) {
     margin-left: toEm(8);
   }
 
   @media (min-width: $breakpoint-tablet) {
-    width: toEm($size-40);
-    height: toEm($size-40);
+    width: toEm(40);
+    height: toEm(40);
   }
 }
 

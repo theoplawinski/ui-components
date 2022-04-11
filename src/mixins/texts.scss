@@ -1,14 +1,14 @@
 @mixin title-xl {
-  font-size: toEm($size-48);
+  font-size: toEm(48);
   font-weight: 450;
   letter-spacing: toEm(-0.7);
   line-height: 1;
 
   @media (min-width: $breakpoint-tablet) {
-    font-size: toEm($size-72);
+    font-size: toEm(72);
   }
 
   @media (min-width: $breakpoint-laptop) {
-    font-size: toEm($size-128);
+    font-size: toEm(128);
   }
 }

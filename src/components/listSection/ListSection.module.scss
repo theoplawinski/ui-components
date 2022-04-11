@@ -1,20 +1,20 @@
 @import '../../references.scss';
 
 .root {
-  margin-top: toEm($size-88);
+  margin-top: toEm(88);
 
   @media (min-width: $breakpoint-tablet) {
-    margin-top: toEm($size-128);
+    margin-top: toEm(128);
   }
 
   @media (min-width: $breakpoint-laptop) {
-    margin-top: toEm($size-248);
+    margin-top: toEm(248);
   }
 }
 
 .title {
   @include title-xl;
-  padding-left: toEm($size-14);
+  padding-left: toEm(14);
 
   @media (min-width: $breakpoint-tablet) {
     padding-left: 0;
@@ -27,28 +27,28 @@
 }
 
 .gridContainer {
-  padding-top: toEm($size-80);
+  padding-top: toEm(80);
 
   @media (min-width: $breakpoint-tablet) {
-    padding-top: toEm($size-112);
+    padding-top: toEm(112);
   }
 
   @media (min-width: $breakpoint-laptop) {
-    padding-top: toEm($size-248);
+    padding-top: toEm(248);
   }
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  row-gap: toEm($size-32);
-  column-gap: toEm($size-16);
+  row-gap: toEm(32);
+  column-gap: toEm(16);
   user-select: none;
 
   @media (min-width: $breakpoint-tablet) {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: toEm($size-64);
-    column-gap: toEm($size-32);
+    row-gap: toEm(64);
+    column-gap: toEm(32);
   }
 
   @media (min-width: $breakpoint-laptop) {
@@ -62,10 +62,10 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: toEm($size-296);
+  height: toEm(296);
   background-color: var(--color-gray);
 
   @media (min-width: $breakpoint-tablet) {
-    height: toEm($size-296 * 1.25);
+    height: toEm(296 * 1.25);
   }
 }
