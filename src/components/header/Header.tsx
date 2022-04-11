@@ -34,16 +34,18 @@ const Header = (props: IProps) => {
         scale: 1,
         opacity: 1,
         duration: 1.2,
-        ease: 'elastic.out(1.7, 0.5)'
+        ease: 'elastic.out(2, 0.75)'
       }
     )
-      .to(titleCircleRef.current, {
-        rotate: -360,
-        duration: 1.5,
-        repeat: 1,
-        repeatDelay: 0.1,
-        ease: 'power4.inOut'
-      })
+      .to(
+        titleCircleRef.current,
+        {
+          rotate: -360,
+          duration: 2,
+          ease: 'power4.inOut'
+        },
+        '<+0.2'
+      )
       .fromTo(
         titleTextRef.current,
         {
@@ -57,7 +59,7 @@ const Header = (props: IProps) => {
           ease: 'power4.out',
           onStart: () => props.onPlayInComplete()
         },
-        '<+2.5'
+        '<+1.2'
       )
 
     return tl
