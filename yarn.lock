@@ -1661,6 +1661,11 @@
   "resolved" "https://registry.npmjs.org/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz"
   "version" "2.3.0"
 
+"vercel-toast@^1.5.5":
+  "integrity" "sha512-MTcNPcy9V+aiHIg5iS9h/3UQXHfY00a5pQv4D14XWOql9sUQuiB3mxQXyARLIHT+HblqZgf4awyaleA/ND16tA=="
+  "resolved" "https://registry.npmjs.org/vercel-toast/-/vercel-toast-1.5.5.tgz"
+  "version" "1.5.5"
+
 "which-boxed-primitive@^1.0.2":
   "integrity" "sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg=="
   "resolved" "https://registry.npmjs.org/which-boxed-primitive/-/which-boxed-primitive-1.0.2.tgz"

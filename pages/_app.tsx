@@ -1,5 +1,6 @@
 import '../src/index.scss'
 import '../styles.css'
+import 'vercel-toast/dist/vercel-toast.css'
 import type { AppProps } from 'next/app'
 import { useEffect } from 'react'
 import WindowHelper from '../src/helpers/WindowHelper'

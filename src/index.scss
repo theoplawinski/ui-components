@@ -77,3 +77,42 @@ body {
     font-size: calc(1vw * 1000 / 1436); // 10px on 1440px screen width
   }
 }
+
+// -------------------------------------------------------- CUSTOM
+body {
+  .toast-container {
+    bottom: toEm(40);
+
+    @media (min-width: $breakpoint-tablet) {
+      right: toEm(40);
+    }
+    
+    .toast {
+      .toast-inner {
+        height: auto;
+        padding: toEm(32) toEm(24);
+        background-color: var(--color-background);
+        color: var(--color-text);
+
+        [data-theme='dark'] & {
+          background-color: var(--color-gray);
+          color: var(--color-text);
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+          padding: toEm(40) toEm(32);
+        }
+      }
+
+      .toast-text {
+        height: fit-content;
+        font-size: toEm(20);
+        line-height: 1.2;
+
+        @media (min-width: $breakpoint-tablet) {
+          font-size: toEm(24);
+        }
+      }
+    }
+  }
+}
