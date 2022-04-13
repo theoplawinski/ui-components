@@ -86,9 +86,10 @@ body {
     @media (min-width: $breakpoint-tablet) {
       right: toEm(40);
     }
-    
+
     .toast {
-      .toast-inner {
+      .toast-inner,
+      .toast-inner.default {
         height: auto;
         padding: toEm(32) toEm(24);
         background-color: var(--color-background);
@@ -96,21 +97,31 @@ body {
 
         [data-theme='dark'] & {
           background-color: var(--color-gray);
-          color: var(--color-text);
         }
 
         @media (min-width: $breakpoint-tablet) {
-          padding: toEm(40) toEm(32);
+          padding: toEm(48);
         }
       }
 
       .toast-text {
         height: fit-content;
+        font-family: $font-satoshi-variable;
         font-size: toEm(20);
+        font-weight: 425;
         line-height: 1.2;
+        opacity: 0.4;
 
         @media (min-width: $breakpoint-tablet) {
           font-size: toEm(24);
+        }
+      }
+    }
+
+    &:hover {
+      .toast {
+        .toast-text {
+          opacity: 0.4 !important;
         }
       }
     }
