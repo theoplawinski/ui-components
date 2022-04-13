@@ -56,7 +56,11 @@
   }
 }
 
-.gridItem {
+.item {
+  position: relative;
+}
+
+.itemWrapper {
   position: relative;
   display: flex;
   justify-content: center;
@@ -67,5 +71,30 @@
 
   @media (min-width: $breakpoint-tablet) {
     height: toEm(296 * 1.25);
+  }
+}
+
+.itemButtons {
+  position: absolute;
+  bottom: toEm(16);
+  right: toEm(24);
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+.itemButton {
+  padding: toEm(10);
+  border: none;
+  transition: opacity 0.15s ease-out;
+  font-family: $font-satoshi-variable;
+  font-size: toEm(16);
+  font-weight: 550;
+  background-color: var(--color-gray);
+  opacity: 0.2;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.4;
   }
 }

@@ -1,5 +1,6 @@
 import css from './ListSection.module.scss'
 import { useContext, useEffect, useLayoutEffect, useRef } from 'react'
+import { createToast } from 'vercel-toast'
 import { merge } from '../../helpers/merge'
 import { GlobalDataContext } from '../../../pages'
 import Container, { EContainerSize } from '../container/Container'
@@ -96,8 +97,42 @@ const ListSection = (props: IProps) => {
       <Container className={css.gridContainer} size={EContainerSize.LARGE}>
         <ul className={css.grid} ref={gridRef}>
           {components.map((Component, i) => (
-            <li className={css.gridItem} key={i}>
-              <Component />
+            <li className={css.item} key={i}>
+              <div className={css.itemWrapper}>
+                <Component />
+              </div>
+              <div className={css.itemButtons}>
+                <button
+                  className={css.itemButton}
+                  onClick={() => {
+                    createToast('Copied HTML structure to clipboard', {
+                      timeout: 3000
+                    })
+                  }}
+                >
+                  HTML
+                </button>
+                <button
+                  className={css.itemButton}
+                  onClick={() => {
+                    createToast('Copied CSS styles to clipboard', {
+                      timeout: 3000
+                    })
+                  }}
+                >
+                  CSS
+                </button>
+                <button
+                  className={css.itemButton}
+                  onClick={() => {
+                    createToast('Copied SCSS styles to clipboard', {
+                      timeout: 3000
+                    })
+                  }}
+                >
+                  SCSS
+                </button>
+              </div>
             </li>
           ))}
         </ul>

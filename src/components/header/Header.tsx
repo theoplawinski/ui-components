@@ -5,7 +5,6 @@ import { GlobalDataContext } from '../../../pages'
 import Container from '../container/Container'
 import ThemeSwitcher from '../themeSwitcher/ThemeSwitcher'
 import gsap from 'gsap'
-import { createToast } from 'vercel-toast'
 
 interface IProps {
   className?: string
@@ -140,14 +139,7 @@ const Header = (props: IProps) => {
   return (
     <header className={merge([css.root, props.className])}>
       <Container className={css.container}>
-        <h2
-          className={css.title}
-          onClick={() => {
-            createToast('Copied styles to clipboard', {
-              timeout: 3000
-            })
-          }}
-        >
+        <h2 className={css.title}>
           <span className={css.title_circle} ref={titleCircleRef} />
           <span className={css.title_text} ref={titleTextRef}>
             {content.header.title}
