@@ -1,0 +1,45 @@
+@import '../../references.scss';
+
+.root {
+  position: relative;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: toEm(296);
+  background-color: var(--color-gray);
+
+  @media (min-width: $breakpoint-tablet) {
+    height: toEm(296 * 1.25);
+  }
+}
+
+.buttons {
+  position: absolute;
+  bottom: toEm(16);
+  right: toEm(24);
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+.button {
+  padding: toEm(10);
+  border: none;
+  transition: opacity 0.15s ease-out;
+  font-family: $font-satoshi-variable;
+  font-size: toEm(16);
+  font-weight: 550;
+  background-color: var(--color-gray);
+  color: var(--color-text);
+  opacity: 0.2;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}

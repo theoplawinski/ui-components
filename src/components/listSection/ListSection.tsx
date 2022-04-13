@@ -8,6 +8,7 @@ import components from '../UIComponents'
 import gsap from 'gsap'
 import { useMediaQuery } from '@react-hook/media-query'
 import { atoms } from '../../atoms/atoms'
+import ListItem from '../listItem/ListItem'
 
 interface IProps {
   className?: string
@@ -79,21 +80,6 @@ const ListSection = (props: IProps) => {
     if (tl.current) tl.current.play()
   }, [props.isLogoPlayInComplete])
 
-  const copyToClipboard = (message: string, messageType: string) => {
-    navigator.clipboard.writeText(message).then(
-      () => {
-        createToast(`Copied ${messageType} to clipboard`, {
-          timeout: 3000
-        })
-      },
-      () => {
-        createToast('Failed to copy', {
-          timeout: 3000
-        })
-      }
-    )
-  }
-
   return (
     <div className={merge([css.root, props.className])}>
       <Container size={EContainerSize.SMALL}>
@@ -112,31 +98,14 @@ const ListSection = (props: IProps) => {
       <Container className={css.gridContainer} size={EContainerSize.LARGE}>
         <ul className={css.grid} ref={gridRef}>
           {components.map(({ Component, htmlStructure, cssStyles, scssStyles }, i) => (
-            <li className={css.item} key={i}>
-              <div className={css.itemWrapper}>
-                <Component />
-              </div>
-              <div className={css.itemButtons}>
-                <button
-                  className={css.itemButton}
-                  onClick={() => copyToClipboard(htmlStructure, 'HTML structure')}
-                >
-                  HTML
-                </button>
-                <button
-                  className={css.itemButton}
-                  onClick={() => copyToClipboard(cssStyles, 'CSS styles')}
-                >
-                  CSS
-                </button>
-                <button
-                  className={css.itemButton}
-                  onClick={() => copyToClipboard(scssStyles, 'SCSS styles')}
-                >
-                  SCSS
-                </button>
-              </div>
-            </li>
+            <ListItem
+              htmlStructure={htmlStructure}
+              cssStyles={cssStyles}
+              scssStyles={scssStyles}
+              key={i}
+            >
+              <Component />
+            </ListItem>
           ))}
         </ul>
       </Container>
