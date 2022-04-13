@@ -19,7 +19,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: toEm(24);
+  font-size: toEm(32);
   font-weight: 450;
 
   @media (min-width: $breakpoint-tablet) {
@@ -69,8 +69,8 @@
 }
 
 .buttonItem {
-  width: toEm(24);
-  height: toEm(24);
+  width: toEm(34);
+  height: toEm(34);
 
   &:not(:first-child) {
     margin-left: toEm(8);
@@ -88,6 +88,7 @@
   height: 100%;
   color: var(--color-text);
   transition: opacity 0.15s ease-out;
+  will-change: opacity;
   opacity: 0.2;
 
   &:hover {

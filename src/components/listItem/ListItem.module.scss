@@ -20,11 +20,16 @@
 
 .buttons {
   position: absolute;
-  bottom: toEm(16);
-  right: toEm(24);
+  bottom: toEm(10);
+  right: toEm(18);
   display: flex;
   justify-content: flex-end;
   align-items: stretch;
+
+  @media (min-width: $breakpoint-tablet) {
+    bottom: toEm(16);
+  right: toEm(24);
+  }
 }
 
 .button {
@@ -32,12 +37,16 @@
   border: none;
   transition: opacity 0.15s ease-out;
   font-family: $font-satoshi-variable;
-  font-size: toEm(16);
+  font-size: toEm(14);
   font-weight: 550;
   background: transparent;
   color: var(--color-text);
   opacity: 0.2;
   cursor: pointer;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: toEm(16);
+  }
 
   &:hover {
     opacity: 0.5;

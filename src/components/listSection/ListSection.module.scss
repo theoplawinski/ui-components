@@ -1,7 +1,7 @@
 @import '../../references.scss';
 
 .root {
-  margin-top: toEm(88);
+  margin-top: toEm(112);
 
   @media (min-width: $breakpoint-tablet) {
     margin-top: toEm(128);
@@ -27,7 +27,7 @@
 }
 
 .gridContainer {
-  padding-top: toEm(80);
+  padding-top: toEm(104);
 
   @media (min-width: $breakpoint-tablet) {
     padding-top: toEm(112);

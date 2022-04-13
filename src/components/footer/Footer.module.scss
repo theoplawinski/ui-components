@@ -1,8 +1,5 @@
 @import '../../references.scss';
 
-$ease: cubic-bezier(0.65, 0, 0.35, 1);
-$duration: 0.45s;
-
 .root {
   margin-top: toEm(112);
   margin-bottom: toEm(56);
@@ -21,7 +18,8 @@ $duration: 0.45s;
 
 .text {
   font-size: toEm(18);
-  font-weight: 425;
+  font-weight: 450;
+  color: var(--color-text);
   opacity: 0.2;
 
   @media (min-width: $breakpoint-tablet) {
@@ -32,32 +30,6 @@ $duration: 0.45s;
 .externalLink {
   position: relative;
   display: inline-block;
-  padding-bottom: toEm(2);
-  will-change: transform, opacity;
-
-  &::before,
-  &::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: toEm(1);
-    will-change: transform;
-    background-color: var(--color-text);
-    content: '';
-  }
-
-  &::before {
-    transform-origin: right;
-    transform: scaleX(1);
-    transition: transform $duration $ease 0.2s;
-  }
-
-  &::after {
-    transform-origin: left;
-    transform: scaleX(0);
-    transition: transform $duration $ease;
-  }
 
   &_icon {
     position: absolute;
@@ -67,17 +39,22 @@ $duration: 0.45s;
     height: toEm(16);
     pointer-events: none;
 
-    &::before,
     &::after {
       position: absolute;
-      inset: 0;
+      top: toEm(1);
+      left: 0;
       transform-origin: center;
-      transform: rotate(-45deg);
+      transform: rotate(-45deg) translateX(toEm(-6));
+      transition: transform 0.45s cubic-bezier(0.4, 0, 0, 1),
+        opacity 0.45s cubic-bezier(0.4, 0, 0, 1);
+      width: 100%;
+      height: 100%;
       margin-left: toEm(2);
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='svg-arrow-right' viewBox='0 0 16 12' width='100%25' height='100%25'%3E%3Cpolygon points='15.8,6 15.3,5.5 15.3,5.5 9.9,0.1 9.2,0.8 13.9,5.5 0.5,5.5 0.5,6.5 13.9,6.5 9.2,11.2 9.9,11.9 15.3,6.5 15.3,6.5'%3E%3C/polygon%3E%3C/svg%3E");
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
+      opacity: 0;
       pointer-events: none;
       content: '';
 
@@ -85,39 +62,12 @@ $duration: 0.45s;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='svg-arrow-right' viewBox='0 0 16 12' width='100%25' height='100%25'%3E%3Cpolygon points='15.8,6 15.3,5.5 15.3,5.5 9.9,0.1 9.2,0.8 13.9,5.5 0.5,5.5 0.5,6.5 13.9,6.5 9.2,11.2 9.9,11.9 15.3,6.5 15.3,6.5' fill='%23f5f5f7'%3E%3C/polygon%3E%3C/svg%3E");
       }
     }
-
-    &::before {
-      transition: transform $duration $ease 0.2s, opacity $duration $ease 0.2s;
-    }
-
-    &::after {
-      transform: rotate(-45deg) translateX(toEm(-6));
-      transition: transform $duration $ease, opacity $duration $ease;
-      opacity: 0;
-    }
   }
 
   &:hover {
-    &::before {
-      transform: scaleX(0);
-      transition: transform $duration $ease;
-    }
-
-    &::after {
-      transform: scaleX(1);
-      transition: transform $duration $ease 0.3s;
-    }
-
     .externalLink_icon {
-      &::before {
-        transform: rotate(-45deg) translateX(toEm(6));
-        transition: transform $duration $ease, opacity $duration $ease;
-        opacity: 0;
-      }
-
       &::after {
         transform: rotate(-45deg) translateX(0);
-        transition: transform $duration $ease 0.3s, opacity $duration $ease 0.3s;
         opacity: 1;
       }
     }
