@@ -13,4 +13,10 @@ const Component = () => {
   )
 }
 
-export default Component
+const htmlStructure = `soundbar html`
+
+const cssStyles = `soundbar css`
+
+const scssStyles = `soundbar scss`
+
+export default { Component, htmlStructure, cssStyles, scssStyles }

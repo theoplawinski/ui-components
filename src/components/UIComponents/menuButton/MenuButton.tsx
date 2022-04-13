@@ -8,4 +8,10 @@ const Component = () => {
   )
 }
 
-export default Component
+const htmlStructure = `menu button html`
+
+const cssStyles = `menu button css`
+
+const scssStyles = `menu button scss`
+
+export default { Component, htmlStructure, cssStyles, scssStyles }

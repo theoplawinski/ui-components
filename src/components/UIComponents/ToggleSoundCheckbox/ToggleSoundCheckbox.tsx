@@ -37,4 +37,10 @@ const Component = () => {
   )
 }
 
-export default Component
+const htmlStructure = `toggle html`
+
+const cssStyles = `toggle css`
+
+const scssStyles = `toggle scss`
+
+export default { Component, htmlStructure, cssStyles, scssStyles }

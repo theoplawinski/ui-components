@@ -79,6 +79,21 @@ const ListSection = (props: IProps) => {
     if (tl.current) tl.current.play()
   }, [props.isLogoPlayInComplete])
 
+  const copyToClipboard = (message: string, messageType: string) => {
+    navigator.clipboard.writeText(message).then(
+      () => {
+        createToast(`Copied ${messageType} to clipboard`, {
+          timeout: 3000
+        })
+      },
+      () => {
+        createToast('Failed to copy', {
+          timeout: 3000
+        })
+      }
+    )
+  }
+
   return (
     <div className={merge([css.root, props.className])}>
       <Container size={EContainerSize.SMALL}>
@@ -96,7 +111,7 @@ const ListSection = (props: IProps) => {
       </Container>
       <Container className={css.gridContainer} size={EContainerSize.LARGE}>
         <ul className={css.grid} ref={gridRef}>
-          {components.map((Component, i) => (
+          {components.map(({ Component, htmlStructure, cssStyles, scssStyles }, i) => (
             <li className={css.item} key={i}>
               <div className={css.itemWrapper}>
                 <Component />
@@ -104,31 +119,19 @@ const ListSection = (props: IProps) => {
               <div className={css.itemButtons}>
                 <button
                   className={css.itemButton}
-                  onClick={() => {
-                    createToast('Copied HTML structure to clipboard', {
-                      timeout: 3000
-                    })
-                  }}
+                  onClick={() => copyToClipboard(htmlStructure, 'HTML structure')}
                 >
                   HTML
                 </button>
                 <button
                   className={css.itemButton}
-                  onClick={() => {
-                    createToast('Copied CSS styles to clipboard', {
-                      timeout: 3000
-                    })
-                  }}
+                  onClick={() => copyToClipboard(cssStyles, 'CSS styles')}
                 >
                   CSS
                 </button>
                 <button
                   className={css.itemButton}
-                  onClick={() => {
-                    createToast('Copied SCSS styles to clipboard', {
-                      timeout: 3000
-                    })
-                  }}
+                  onClick={() => copyToClipboard(scssStyles, 'SCSS styles')}
                 >
                   SCSS
                 </button>
