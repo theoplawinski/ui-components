@@ -4,7 +4,8 @@
   position: relative;
   display: inline-block;
   font-size: toEm(22);
-  color: var(--color-text);
+  font-weight: 450;
+  color: var(--color-gray-dark);
   cursor: pointer;
 
   @media (min-width: $breakpoint-tablet) {
