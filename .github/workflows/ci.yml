@@ -1,7 +1,5 @@
 name: Deploy to GitHub Pages
 
-# https://www.linkedin.com/pulse/deploy-nextjs-app-github-pages-federico-antuña/
-
 on:
   push:
     branches: [main]
