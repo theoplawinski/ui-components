@@ -15,13 +15,6 @@ UI Components collection isn't published on npm and not compiled. To use it, you
 
 ## UI Components
 
-## To do
-
-- [ ] Header buttons (Github & infos overlay)
-- [x] Copy code to clipboard (HTML & CSS)
-- [x] Dark theme color
-- [ ] README.md
-
 ## Licence
 
 [MIT](LICENSE)
