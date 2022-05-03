@@ -1,4 +1,5 @@
 export enum EThemeColor {
   LIGHT = 'light',
-  DARK = 'dark'
+  DARK = 'dark',
+  SYSTEM = 'system'
 }

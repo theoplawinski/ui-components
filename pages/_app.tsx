@@ -13,7 +13,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   })
 
   return (
-    <ThemeProvider defaultTheme={EThemeColor.LIGHT}>
+    <ThemeProvider defaultTheme={EThemeColor.SYSTEM}>
       <Component {...pageProps} />
     </ThemeProvider>
   )
